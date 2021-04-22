@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100&display=swap');
+
+
+
+:root {
+    --Moderate_violet: hsl(263, 55%, 52%);
+    --Very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --Very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(0, 0%, 81%);
+    --Light_grayish_blue: hsl(210, 46%, 95%);
+    --PruebaAzul: rgba(255, 255, 255, 0.5; )
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 81.25%;
+}
+
+@media only screen and (max-width: 78em) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-size: 100%;
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    background-color: var(--Light_grayish_blue);
+}
+
+.container {
+    padding: 1.5rem;
+    max-width: 95vw;
+    margin: 5rem 8rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2.2rem;
+    grid-template-areas:
+        "item-1 item-1 item-2 item-3"
+        "item-4 item-5 item-5 item-3";
+}
+
+@media only screen and (max-width: 78em) {
+    .container {
+        padding: 1.5rem;
+        max-width: 95vw;
+        margin: 5rem auto 0;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    html {
+        font-size: 81.25%;
+    }
+
+    .container {
+        padding: 1rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "item-1 item-1 item-1 item-1"
+            "item-2 item-2 item-2 item-2"
+            "item-4 item-4 item-4 item-4"
+            "item-5 item-5 item-5 item-5"
+            "item-3 item-3 item-3 item-3";
+        grid-gap: 1rem;
+    }
+}
+
+.cardboard {
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 10px 11px 38px -6px rgba(207, 207, 207, 0.53);
+    display: grid;
+    grid-template-columns: min-content repeat(3, 1fr);
+    grid-template-areas:
+        "photo headers headers headers"
+        "highlight highlight highlight highlight"
+        "testimonial testimonial testimonial testimonial";
+    grid-gap: 1rem;
+    align-items: start;
+}
+
+.image-photo-box {
+    grid-area: photo;
+    box-sizing: border-box;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 3em;
+    height: 3rem;
+}
+
+.photo-item {
+    width: 3rem;
+}
+
+.headers {
+    grid-area: headers;
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+.verified {
+    opacity: 50%;
+    font-size: 1rem;
+}
+
+.highlight {
+    grid-area: highlight;
+    opacity: 70%;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.testimonial {
+    grid-area: testimonial;
+}
+
+.item-1 {
+    background-color: var(--Moderate_violet);
+    background-image: url("../../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    grid-area: item-1;
+    color: rgba(255, 255, 255, 0.5);
+    color: var(--White);
+}
+
+.item-2 {
+    background-color: var(--Very_dark_grayish_blue);
+    grid-area: item-2;
+    color: var(--White);
+}
+
+.item-3 {
+    background-color: var(--White);
+    grid-area: item-3;
+}
+
+.item-4 {
+    background-color: var(--White);
+    grid-area: item-4;
+}
+
+.item-5 {
+    background-color: var(--Very_dark_blackish_blue);
+    grid-area: item-5;
+    color: var(--White);
+}
+
+.attribution {
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: #7541c8;
+}
+
+
+
+@media (max-width: 1440px; ) {}
